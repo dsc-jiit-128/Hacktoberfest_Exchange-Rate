@@ -1,7 +1,6 @@
 # Exchange Rate
 <img src="https://developers.google.com/community/dsc/images/dsc_lockup.png" height="100px">
 
-Select countries to get the exchange rate for a specific amount
 
 ## Project Specifications
 
@@ -18,7 +17,6 @@ Select countries to get the exchange rate for a specific amount
 
  - Fork the repository and clone.
  - Create a separate branch for your changes.
- - The branch name should be of the format: <Your_Name>_<Your_Batch>    For example: ManasDalakoti_f2.ipynb
  - Then add a Pull Request.
 
 **How to reach us**
