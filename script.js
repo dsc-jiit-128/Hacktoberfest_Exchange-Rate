@@ -12,7 +12,17 @@ function caclulate() {
   const currency_two = currencyEl_two.value;
   // console.log(currency_one);
   fetch(`https://api.exchangerate-api.com/v4/latest/${currency_one}`)
-    .then(res => res.json())
+    .then(res => {
+      if (res.ok) {
+        return res.json();
+      } else {
+        return res.json().then((statusError) => {
+          throw new Error(
+            `Fetch error: ${statusError.error_type} (${res.statusText} - ${res.status})`
+          );
+        });
+      }
+    })
     .then(data => {
       console.log(data);
       for (const tags in data.rates) {
@@ -33,6 +43,9 @@ function caclulate() {
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
 
       amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
+    })
+    .catch(error => {
+      console.error(error);
     });
 }
 
