@@ -34,9 +34,13 @@ function caclulate() {
     });
 }
 
+function printValue() {
+  console.log("Input part hovered");
+}
+
 // Event listeners
 currencyEl_one.addEventListener('change', caclulate);
-amountEl_one.addEventListener('mouseover', caclulate);
+amountEl_one.addEventListener('mouseover', printValue);
 currencyEl_two.addEventListener('change', caclulate);
 amountEl_two.addEventListener('input', caclulate);
 
