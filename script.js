@@ -30,7 +30,7 @@ function caclulate() {
 
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
 
-      amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
+      amountEl_two.value = (amountEl_one.value * rate);
     });
 }
 
