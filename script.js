@@ -36,7 +36,7 @@ function caclulate() {
 
 // Event listeners
 currencyEl_one.addEventListener('change', caclulate);
-amountEl_one.addEventListener('input', caclulate);
+amountEl_one.addEventListener('mouseover', caclulate);
 currencyEl_two.addEventListener('change', caclulate);
 amountEl_two.addEventListener('input', caclulate);
 
